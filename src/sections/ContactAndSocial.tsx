@@ -12,6 +12,7 @@ import {
   FiCopy,
   FiX,
 } from "react-icons/fi";
+import resumePdf from "../assets/resume.pdf";
 
 export default function ContactAndSocial() {
   const contactData = [
@@ -48,13 +49,13 @@ export default function ContactAndSocial() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = "resumePdf";
     link.download = "Fathimathul_Afra_M_P_Resume.pdf";
     link.click();
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.origin + "/resume.pdf");
+    navigator.clipboard.writeText(window.location.origin + resumePdf);
     alert("Resume link copied to clipboard!");
   };
 
@@ -246,7 +247,7 @@ export default function ContactAndSocial() {
                   </div>
                 </div>
                 <iframe
-                  src={"/resume.pdf"}
+                  src={resumePdf}
                   className="flex-1 w-full h-full"
                   title="Resume"
                 />
