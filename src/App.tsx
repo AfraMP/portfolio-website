@@ -12,7 +12,7 @@ import Certifications from "./sections/Certifications";
 import ProjectModal from "./components/ProjectModal";
 import Footer from "./components/Footer";
 // import FloatingRedirect from "./components/FloatingRedirect"; // 1. Import it here
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import CustomCursor from "./components/CustomeCursor";
 import ContactAndSocial from "./sections/ContactAndSocial";
 // ... import your sections
@@ -21,7 +21,7 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       {" "}
       {/* Everything that uses routing hooks must be inside this */}
       <div className="relative min-h-screen bg-darkBg text-gray-100 antialiased">
@@ -63,6 +63,6 @@ export default function App() {
           onClose={() => setIsModalOpen(false)}
         />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
