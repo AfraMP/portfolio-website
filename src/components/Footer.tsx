@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp, FiCpu } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
 import { SiLeetcode, SiHackerrank } from "react-icons/si";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -87,12 +87,12 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-end gap-3">
           <div className="flex items-center gap-4">
             {/* Minimalist Hidden Gateway Button */}
-            <button
+            {/* <button
               onClick={() => navigate("/ai-labs")}
               className="font-mono text-[10px] text-gray-600 hover:text-indigo-400 transition-colors flex items-center gap-1 bg-white/[0.01] hover:bg-indigo-500/5 px-2 py-1 rounded border border-transparent hover:border-indigo-500/20"
             >
               <FiCpu className="text-[11px]" /> SYS_LABS // v1.0
-            </button>
+            </button> */}
 
             <p className="text-xs text-gray-500 tracking-wide font-normal">
               &copy; {currentYear} &bull; Afra &bull; Built with React

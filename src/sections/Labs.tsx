@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
-import { useNavigate } from "react-router-dom"; // Assumes react-router-dom is used, or replace with standard anchor tag
+// import { motion } from "framer-motion";
+// import { FiArrowRight } from "react-icons/fi";
+// import { useNavigate } from "react-router-dom"; // Assumes react-router-dom is used, or replace with standard anchor tag
 
 export default function Labs() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <section id="labs" className="scroll-mt-24 max-w-5xl mx-auto px-4">
@@ -36,7 +36,7 @@ export default function Labs() {
           </div>
 
           {/* Right Side: Action Trigger Redirect */}
-          <motion.button
+          {/* <motion.button
             onClick={() => navigate("/ai-labs")} // Swaps views safely onto your sub-route canvas
             whileHover={{ scale: 1.03, x: 4 }}
             whileTap={{ scale: 0.98 }}
@@ -44,7 +44,7 @@ export default function Labs() {
           >
             ENTER CONSOLE{" "}
             <FiArrowRight className="text-sm text-indigo-400 group-hover:translate-x-0.5 transition-transform" />
-          </motion.button>
+          </motion.button> */}
         </div>
       </div>
     </section>

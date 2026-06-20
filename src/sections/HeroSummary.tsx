@@ -7,6 +7,7 @@ import {
   FiMail,
   FiPhone,
 } from "react-icons/fi";
+import profilePic from "../assets/Fathimathul_Afra_MP.png";
 
 // Premium Interactive Ecosystem Architecture Hub
 const InteractiveTechCloud = () => {
@@ -135,7 +136,7 @@ export default function HeroSummary() {
 
               <div className="w-full h-full rounded-full p-2 relative z-10 bg-black/40">
                 <img
-                  src="/src/assets/Fathimathul_Afra_MP.png"
+                  src={profilePic}
                   alt="Fathimathul Afra"
                   className="w-full h-full object-cover rounded-full border border-white/10 grayscale filter contrast-115 brightness-95 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 ease-out"
                 />

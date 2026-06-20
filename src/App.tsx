@@ -12,7 +12,7 @@ import Certifications from "./sections/Certifications";
 import ProjectModal from "./components/ProjectModal";
 import Footer from "./components/Footer";
 // import FloatingRedirect from "./components/FloatingRedirect"; // 1. Import it here
-import { HashRouter, Routes, Route } from "react-router-dom";
+// import { HashRouter, Routes, Route } from "react-router-dom";
 import CustomCursor from "./components/CustomeCursor";
 import ContactAndSocial from "./sections/ContactAndSocial";
 // ... import your sections
@@ -21,48 +21,44 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <HashRouter>
-      {" "}
-      {/* Everything that uses routing hooks must be inside this */}
-      <div className="relative min-h-screen bg-darkBg text-gray-100 antialiased">
-        <CustomCursor />
-        <BackgroundGlow />
-        <Navbar />
+    <div className="relative min-h-screen bg-darkBg text-gray-100 antialiased">
+      <CustomCursor />
+      <BackgroundGlow />
+      <Navbar />
 
-        <Routes>
-          {/* Main Portfolio Route */}
-          <Route
+      {/* <Routes> */}
+      {/* Main Portfolio Route */}
+      {/* <Route
             path="/"
-            element={
-              <main className="max-w-6xl mx-auto px-6 py-6 space-y-24">
-                <HeroSummary />
-                {/* <HeroSummary onOpenExplorer={() => setIsModalOpen(true)} /> */}
-                <Experience />
-                {/* <TechnicalSkills /> */}
-                <Projects />
-                <Skills />
-                <Education />
-                <Certifications />
-              </main>
-            }
-          />
+            element={ */}
+      <main className="max-w-6xl mx-auto px-6 py-6 space-y-24">
+        <HeroSummary />
+        {/* <HeroSummary onOpenExplorer={() => setIsModalOpen(true)} /> */}
+        <Experience />
+        {/* <TechnicalSkills /> */}
+        <Projects />
+        <Skills />
+        <Education />
+        <Certifications />
+      </main>
+      {/* }
+          /> */}
 
-          {/* Isolated Advanced AI Labs Route */}
-          <Route
+      {/* Isolated Advanced AI Labs Route */}
+      {/* <Route
             path="/ai-labs"
             element={<div className="text-white p-10">Coming soon!</div>}
-          />
-        </Routes>
-        <ContactAndSocial />
-        <Footer />
+          /> */}
+      {/* </Routes> */}
+      <ContactAndSocial />
+      <Footer />
 
-        {/* <FloatingRedirect /> */}
+      {/* <FloatingRedirect /> */}
 
-        <ProjectModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
-      </div>
-    </HashRouter>
+      <ProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
   );
 }
