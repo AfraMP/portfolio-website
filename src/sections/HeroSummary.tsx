@@ -13,7 +13,6 @@ import resumePdf from "../assets/resume.pdf";
 // Premium Interactive Ecosystem Architecture Hub
 const InteractiveTechCloud = () => {
   const [_hoveredTech, setHoveredTech] = useState<string | null>(null);
-
   const techs = [
     {
       name: "Node.js",
@@ -112,7 +111,12 @@ export default function HeroSummary() {
       bgColor: "bg-purple-500/[0.04]",
     },
   ];
-
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = resumePdf;
+    link.download = "Fathimathul_Afra_M_P_Resume.pdf";
+    link.click();
+  };
   return (
     <section
       id="summary"
@@ -255,13 +259,13 @@ export default function HeroSummary() {
 
           {/* Core Call to Action Elements */}
           <div className="flex flex-wrap items-center gap-4 border-t border-white/5 pt-6 mt-4">
-            <a
-              href={resumePdf}
-              download
+            <button
+              onClick={handleDownload}
+              title="Download"
               className="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 border-2 border-indigo-400/20 text-xs font-black tracking-wider text-white flex items-center gap-2 transition-all shadow-md shadow-indigo-600/10 hover:-translate-y-0.5"
             >
               <FiDownload /> DOWNLOAD RESUME
-            </a>
+            </button>
             {/* <button
               onClick={onOpenExplorer}
               className="px-6 py-3.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border-2 border-white/5 hover:border-white/10 text-xs font-black tracking-wider text-gray-300 hover:text-white flex items-center gap-2 transition-all hover:-translate-y-0.5"
