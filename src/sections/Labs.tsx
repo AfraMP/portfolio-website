@@ -1,6 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FiArrowRight, FiCpu } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom"; // Assumes react-router-dom is used, or replace with standard anchor tag
 
 export default function Labs() {

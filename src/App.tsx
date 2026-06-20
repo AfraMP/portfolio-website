@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import BackgroundGlow from "./components/BackgroundGlow";
 import Navbar from "./components/Navbar";
 import HeroSummary from "./sections/HeroSummary";
 import Experience from "./sections/Experience";
-import TechnicalSkills from "./sections/TechnicalSkills";
+// import TechnicalSkills from "./sections/TechnicalSkills";
 import Projects from "./sections/Projects";
 // import Labs from "./sections/Labs";
 import Skills from "./sections/Skills";
@@ -11,7 +11,7 @@ import Education from "./sections/Education";
 import Certifications from "./sections/Certifications";
 import ProjectModal from "./components/ProjectModal";
 import Footer from "./components/Footer";
-import FloatingRedirect from "./components/FloatingRedirect"; // 1. Import it here
+// import FloatingRedirect from "./components/FloatingRedirect"; // 1. Import it here
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomCursor from "./components/CustomeCursor";
 import ContactAndSocial from "./sections/ContactAndSocial";
@@ -35,7 +35,8 @@ export default function App() {
             path="/"
             element={
               <main className="max-w-6xl mx-auto px-6 py-6 space-y-24">
-                <HeroSummary onOpenExplorer={() => setIsModalOpen(true)} />
+                <HeroSummary />
+                {/* <HeroSummary onOpenExplorer={() => setIsModalOpen(true)} /> */}
                 <Experience />
                 {/* <TechnicalSkills /> */}
                 <Projects />

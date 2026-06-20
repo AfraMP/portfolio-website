@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   FiDownload,
-  FiCompass,
   FiMapPin,
   FiCheckCircle,
   FiMail,
@@ -11,7 +10,7 @@ import {
 
 // Premium Interactive Ecosystem Architecture Hub
 const InteractiveTechCloud = () => {
-  const [hoveredTech, setHoveredTech] = useState<string | null>(null);
+  const [_hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const techs = [
     {
@@ -84,11 +83,7 @@ const InteractiveTechCloud = () => {
   );
 };
 
-export default function HeroSummary({
-  onOpenExplorer,
-}: {
-  onOpenExplorer: any;
-}) {
+export default function HeroSummary() {
   const recruiterBadges = [
     {
       text: "OPEN TO ROLES IN UAE",
