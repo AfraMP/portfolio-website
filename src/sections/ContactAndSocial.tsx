@@ -49,7 +49,7 @@ export default function ContactAndSocial() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "resumePdf";
+    link.href = resumePdf;
     link.download = "Fathimathul_Afra_M_P_Resume.pdf";
     link.click();
   };

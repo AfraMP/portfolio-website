@@ -8,6 +8,7 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import profilePic from "../assets/Fathimathul_Afra_MP.png";
+import resumePdf from "../assets/resume.pdf";
 
 // Premium Interactive Ecosystem Architecture Hub
 const InteractiveTechCloud = () => {
@@ -255,7 +256,7 @@ export default function HeroSummary() {
           {/* Core Call to Action Elements */}
           <div className="flex flex-wrap items-center gap-4 border-t border-white/5 pt-6 mt-4">
             <a
-              href="/resume.pdf"
+              href={resumePdf}
               download
               className="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 border-2 border-indigo-400/20 text-xs font-black tracking-wider text-white flex items-center gap-2 transition-all shadow-md shadow-indigo-600/10 hover:-translate-y-0.5"
             >
