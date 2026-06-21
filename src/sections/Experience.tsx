@@ -7,16 +7,24 @@ export default function Experience() {
       role: "Software Engineer",
       company: "Beinex Solutions (Remote)",
       description:
-        "Worked as part of the development team on Aurex, a digital assurance platform for risk, governance, audit, and compliance, delivering features sprint-wise as part of an agile team. Built and maintained Angular modules, including the TimeLog module and dynamic, reusable components, while using SonarQube for code quality and Cursor AI to generate unit tests. Collaborated closely with UI/UX and backend teams during feature planning, and fixed bugs to optimize overall UI performance.",
+        "Worked as an Angular Developer at Beinex, contributing to the development and continuous improvement of Aurex.",
+      task: [
+        "Built and maintained Angular modules for Aurex, supporting complex, data-heavy workflows across multiple compliance and audit functions.",
+        "Developed the TimeLog module end-to-end, from requirement gathering to deployment, for accurate time tracking and reporting.",
+        "Led the migration of key platform sections to a micro-frontend architecture, enabling independent module deployment and reducing cross-team development conflicts.",
+        "Built dynamic, reusable UI components, reducing duplicate code and speeding up new feature development across teams.",
+        "Maintained code quality and security standards using SonarQube, identifying and resolving vulnerabilities before deployment.",
+        "Worked closely with UI/UX designers and backend developers during feature planning, contributing to technical feasibility decisions and sprint scoping.",
+        "Improved application performance and responsiveness, resolving critical bugs to ensure platform stability for enterprise clients.",
+      ],
       techStack: [
-        "Next.js",
-        "React",
         "Angular",
         "TypeScript",
         "REST APIs",
         "TailwindCSS",
         "SonarQube",
         "Git",
+        "Micro frontend",
       ],
       accent: "from-indigo-500 via-purple-500 to-pink-500",
       glowColor: "rgba(99, 102, 241, 0.15)",
@@ -26,9 +34,16 @@ export default function Experience() {
       role: "Full Stack Developer",
       company: "Tandemloop Technologies",
       description:
-        "Worked as a MEAN Stack Developer at Tandemloop, contributing to both government and enterprise client projects. Built frontend features using React for DOH, a government project, and worked on Zone Suite, an enterprise CRM application, using the MEAN stack across multiple integrated modules. Collaborated with backend developers and designers to deliver features in sprint-based cycles, while maintaining code quality through structured reviews and version control practices.",
+        "Worked as a MEAN Stack Developer at Tandemloop, building both frontend and backend features for Zone Suite, an enterprise CRM platform.",
+      task: [
+        "Built responsive React/Angular frontends with backend REST API integrations, ensuring smooth, fault-tolerant data flow across multiple environments",
+        "Used NgRx and RxJS for frontend state management, paired with backend API integration and async data handling for Zone Suite CRM's multi-tenant architecture",
+        "Partnered with backend developers, designers, and PMs to deliver full-stack features in Scrum sprints, maintaining quality through Git workflows and code reviews",
+        "Built OAuth2 (Gmail/Office 365) and Razorpay webhook integrations end-to-end, covering both backend logic and frontend implementation",
+      ],
       techStack: [
         "Angular",
+        "React",
         "Node.js",
         "Express.js",
         "MongoDB",
@@ -36,6 +51,9 @@ export default function Experience() {
         "RxJS",
         "gRPC",
         "Python",
+        "Mentored juniors",
+        "OAuth2",
+        "Third-party API integrations",
       ],
       accent: "from-cyan-400 via-teal-400 to-emerald-400",
       glowColor: "rgba(6, 182, 212, 0.15)",
@@ -109,7 +127,7 @@ export default function Experience() {
                     <h3 className="text-xl font-extrabold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">
                       {exp.role}
                     </h3>
-                    <p className="text-xs font-bold text-cyan-400 mt-0.5 tracking-wide">
+                    <p className="text-xm font-bold text-cyan-400 mt-0.5 tracking-wide">
                       {exp.company}
                     </p>
                   </div>
@@ -117,9 +135,16 @@ export default function Experience() {
               </div>
 
               {/* Core Context Block */}
-              <p className="text-xs md:text-sm text-gray-400 leading-relaxed font-normal group-hover:text-gray-300 transition-colors text-justify">
+              <p className="text-xs text-justify md:text-sm pb-2 text-gray-400 leading-relaxed font-normal group-hover:text-gray-300 transition-colors text-justify">
                 {exp.description}
               </p>
+              <ul className="text-xs text-justify list-disc space-y-2 text-gray-400 group-hover:text-gray-300 ml-4">
+                {exp.task.map((task: string, i: number) => (
+                  <li key={i} className="leading-relaxed">
+                    {task}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           </motion.div>
         ))}
