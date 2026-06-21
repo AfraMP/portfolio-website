@@ -1,0 +1,154 @@
+import { motion } from "framer-motion";
+
+export default function Experience() {
+  const experiences = [
+    {
+      date: "Nov 2024 - Feb 2026",
+      role: "Software Engineer",
+      company: "Beinex Solutions (Remote)",
+      description:
+        "Worked as an Angular Developer at Beinex, contributing to the development and continuous improvement of Aurex.",
+      task: [
+        "Built and maintained Angular modules for Aurex, supporting complex, data-heavy workflows across multiple compliance and audit functions.",
+        "Developed the TimeLog module end-to-end, from requirement gathering to deployment, for accurate time tracking and reporting.",
+        "Led the migration of key platform sections to a micro-frontend architecture, enabling independent module deployment and reducing cross-team development conflicts.",
+        "Built dynamic, reusable UI components, reducing duplicate code and speeding up new feature development across teams.",
+        "Maintained code quality and security standards using SonarQube, identifying and resolving vulnerabilities before deployment.",
+        "Worked closely with UI/UX designers and backend developers during feature planning, contributing to technical feasibility decisions and sprint scoping.",
+        "Improved application performance and responsiveness, resolving critical bugs to ensure platform stability for enterprise clients.",
+      ],
+      techStack: [
+        "Angular",
+        "TypeScript",
+        "REST APIs",
+        "TailwindCSS",
+        "SonarQube",
+        "Git",
+        "Micro frontend",
+      ],
+      accent: "from-indigo-500 via-purple-500 to-pink-500",
+      glowColor: "rgba(99, 102, 241, 0.15)",
+    },
+    {
+      date: "Nov 2021 - Jun 2024",
+      role: "Full Stack Developer",
+      company: "Tandemloop Technologies",
+      description:
+        "Worked as a MEAN Stack Developer at Tandemloop, building both frontend and backend features for Zone Suite, an enterprise CRM platform.",
+      task: [
+        "Built responsive React/Angular frontends with backend REST API integrations, ensuring smooth, fault-tolerant data flow across multiple environments",
+        "Used NgRx and RxJS for frontend state management, paired with backend API integration and async data handling for Zone Suite CRM's multi-tenant architecture",
+        "Partnered with backend developers, designers, and PMs to deliver full-stack features in Scrum sprints, maintaining quality through Git workflows and code reviews",
+        "Built OAuth2 (Gmail/Office 365) and Razorpay webhook integrations end-to-end, covering both backend logic and frontend implementation",
+      ],
+      techStack: [
+        "Angular",
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JavaScript",
+        "RxJS",
+        "gRPC",
+        "Python",
+        "Mentored juniors",
+        "OAuth2",
+        "Third-party API integrations",
+      ],
+      accent: "from-cyan-400 via-teal-400 to-emerald-400",
+      glowColor: "rgba(6, 182, 212, 0.15)",
+    },
+  ];
+
+  return (
+    <section id="experience" className="scroll-mt-24 max-w-5xl mx-auto px-4">
+      <h2 className="text-3xl font-black tracking-tight mb-16 text-center bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
+        Experience
+      </h2>
+
+      <div className="space-y-12">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.98, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch"
+          >
+            {/* LEFT COLUMN: Clean Timeline & Technology Stack Directory */}
+            <div className="md:col-span-3 p-4 rounded-2xl bg-white/[0.01] border border-white/5 relative overflow-hidden flex flex-col justify-between group">
+              <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
+
+              <div className="space-y-1 mb-4">
+                <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">
+                  Timeline Bound
+                </p>
+                <h4 className="text-sm font-black text-gray-300 group-hover:text-white transition-colors">
+                  {exp.date}
+                </h4>
+              </div>
+
+              {/* Technologies Deployed Stack */}
+              <div className="mt-auto space-y-2">
+                <span className="block text-[9px] font-mono text-gray-500 font-bold tracking-widest uppercase">
+                  Tech Stack
+                </span>
+                <div className="flex flex-wrap gap-1">
+                  {exp.techStack.map((tech, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="text-[10px] font-mono font-medium px-2 py-0.5 rounded bg-white/[0.02] border border-white/5 text-gray-400 group-hover:border-white/10 group-hover:text-white transition-colors duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: Performance Summary Terminals */}
+            <motion.div
+              whileHover={{
+                y: -4,
+                boxShadow: `0 20px 40px -10px ${exp.glowColor}`,
+              }}
+              className="md:col-span-9 glass-card p-6 md:p-8 rounded-2xl relative overflow-hidden transition-all duration-500 group cursor-default"
+            >
+              {/* Left Side Accent Neon Core Strip */}
+              <div
+                className={`absolute top-0 bottom-0 left-0 w-[3px] bg-gradient-to-b ${exp.accent} opacity-50 group-hover:opacity-100 transition-opacity duration-300`}
+              />
+
+              {/* Command Prompt Header Graphic */}
+              <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-4">
+                <div className="flex items-center gap-4">
+                  <div>
+                    <h3 className="text-xl font-extrabold tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all duration-300">
+                      {exp.role}
+                    </h3>
+                    <p className="text-xm font-bold text-cyan-400 mt-0.5 tracking-wide">
+                      {exp.company}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Core Context Block */}
+              <p className="text-xs text-justify md:text-sm pb-2 text-gray-400 leading-relaxed font-normal group-hover:text-gray-300 transition-colors text-justify">
+                {exp.description}
+              </p>
+              <ul className="text-xs text-justify list-disc space-y-2 text-gray-400 group-hover:text-gray-300 ml-4">
+                {exp.task.map((task: string, i: number) => (
+                  <li key={i} className="leading-relaxed">
+                    {task}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
